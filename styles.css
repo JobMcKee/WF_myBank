@@ -1,0 +1,341 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* App Container */
+.app-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Left Navigation Panel */
+.left-nav {
+    width: 280px;
+    background-color: #fff;
+    border-right: 1px solid #e0e0e0;
+    padding: 0;
+    position: fixed;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-header {
+    padding: 2rem 1.5rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.nav-header h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.nav-menu {
+    list-style: none;
+    padding: 1rem 0;
+}
+
+.nav-item {
+    margin: 0;
+}
+
+.nav-item a {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 1.5rem; /* 50% taller for desktop */
+    text-decoration: none;
+    color: #666;
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+}
+
+.nav-item a:hover {
+    background-color: #f8f9fa;
+    color: #2c3e50;
+}
+
+.nav-item.active a {
+    background-color: #e3f2fd;
+    color: #1976d2;
+    border-left-color: #1976d2;
+}
+
+.nav-item .nav-icon {
+    font-size: 1.1rem;
+    margin-right: 0.75rem;
+    width: 20px;
+    text-align: center;
+    display: inline-block;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    margin-left: 280px;
+    padding: 2rem;
+    max-width: calc(100vw - 280px);
+}
+
+/* Balance Header */
+.balance-header {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.account-balance {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #000 !important; /* Always black, even if negative */
+    text-align: center;
+}
+
+/* Transactions Section */
+.transactions-section {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.transactions-container {
+    padding: 0;
+}
+
+/* Month Divider */
+.month-divider {
+    background-color: #f8f9fa;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #e0e0e0;
+    font-weight: 600;
+    color: #666;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Transaction Item */
+.transaction-item {
+    display: flex;
+    align-items: center;
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid #f0f0f0;
+    transition: background-color 0.2s ease;
+}
+
+.transaction-item:hover {
+    background-color: #f8f9fa;
+}
+
+.transaction-item:last-child {
+    border-bottom: none;
+}
+
+/* Transaction Icon */
+.transaction-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.transaction-icon.food { background-color: #ff6b6b; }
+.transaction-icon.gas { background-color: #4ecdc4; }
+.transaction-icon.shop { background-color: #45b7d1; }
+.transaction-icon.income { background-color: #96ceb4; }
+.transaction-icon.bills { background-color: #feca57; }
+.transaction-icon.entertainment { background-color: #ff9ff3; }
+.transaction-icon.healthcare { background-color: #54a0ff; }
+.transaction-icon.other { background-color: #a55eea; }
+
+/* Transaction Details */
+.transaction-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.transaction-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.transaction-description {
+    font-weight: 500;
+    color: #2c3e50;
+    font-size: 1rem;
+}
+
+.transaction-amount {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.transaction-amount.positive {
+    color: #27ae60;
+}
+
+.transaction-amount.negative {
+    color: #e74c3c;
+}
+
+.transaction-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.transaction-date {
+    margin-right: auto;
+}
+
+.transaction-category {
+    background-color: #f1f3f4;
+    color: #5f6368;
+    padding: 0.25rem 0.5rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    margin-left: 0.5rem;
+}
+
+/* Edit Icon */
+.transaction-edit {
+    margin-left: 1rem;
+    padding: 0.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #666;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.transaction-edit:hover {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.transaction-edit i {
+    font-size: 1rem;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .left-nav {
+        width: 100%;
+        height: auto;
+        position: static;
+        border-right: none;
+        border-bottom: 1px solid #e0e0e0;
+    }
+
+    .nav-menu {
+        display: flex;
+        padding: 0;
+    }
+
+    .nav-item {
+        flex: 1;
+    }
+
+    .nav-item a {
+        padding: 1rem; /* Normal height for mobile */
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-item .nav-icon {
+        margin-right: 0;
+        margin-bottom: 0.25rem;
+    }
+
+    .main-content {
+        margin-left: 0;
+        max-width: 100vw;
+        padding: 1rem;
+    }
+
+    .balance-header {
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .account-balance {
+        font-size: 2rem;
+    }
+
+    .transaction-item {
+        padding: 1rem;
+    }
+
+    .transaction-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
+    }
+
+    .transaction-description {
+        font-size: 0.9rem;
+    }
+
+    .transaction-amount {
+        font-size: 0.9rem;
+    }
+
+    .transaction-edit {
+        padding: 0.4rem;
+    }
+
+    .transaction-edit i {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-content {
+        padding: 0.75rem;
+    }
+
+    .balance-header {
+        padding: 1rem;
+    }
+
+    .account-balance {
+        font-size: 1.75rem;
+    }
+
+    .transaction-item {
+        padding: 0.75rem;
+    }
+
+    .nav-item a {
+        padding: 0.75rem;
+        font-size: 0.85rem;
+    }
+}

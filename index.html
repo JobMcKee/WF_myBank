@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyBank - Personal Banking</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Using Unicode symbols instead of Font Awesome for better compatibility -->
+</head>
+<body>
+    <div class="app-container">
+        <!-- Left Navigation Panel -->
+        <nav class="left-nav">
+            <div class="nav-header">
+                <h1>MyBank</h1>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item active">
+                    <a href="#money">
+                        <span class="nav-icon">💰</span>
+                        <span>Money</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#budget">
+                        <span class="nav-icon">📊</span>
+                        <span>Budget</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Account Balance Header -->
+            <div class="balance-header">
+                <h2 class="account-balance">$2,847.52</h2>
+            </div>
+
+            <!-- Transactions Section -->
+            <section class="transactions-section">
+                <div class="transactions-container" id="transactions-container">
+                    <!-- Transactions will be dynamically inserted here -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
