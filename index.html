@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myBank - Personal Banking</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Using Unicode symbols instead of Font Awesome for better compatibility -->
+</head>
+<body>
+    <div class="app-container">
+        <!-- Left Navigation Pane -->
+        <nav class="sidebar">
+            <div class="logo">
+                <h2>myBank</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item active">
+                    <a href="#money" class="nav-link">
+                        <span class="nav-icon">💰</span>
+                        <span>Money</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#budget" class="nav-link">
+                        <span class="nav-icon">📊</span>
+                        <span>Budget</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Header with Account Balance -->
+            <header class="header">
+                <div class="account-balance">
+                    <span class="balance-amount">$2,847.63</span>
+                </div>
+            </header>
+
+            <!-- Transactions List -->
+            <section class="transactions-section">
+                <div class="transactions-container">
+                    <div class="month-divider">
+                        <h3>December 2024</h3>
+                    </div>
+                    
+                    <div class="transaction-item">
+                        <div class="transaction-icon food">
+                            <span>🍴</span>
+                        </div>
+                        <div class="transaction-details">
+                            <div class="transaction-name">Starbucks Coffee</div>
+                            <div class="transaction-date">Dec 15, 2024</div>
+                            <div class="transaction-category">food</div>
+                        </div>
+                        <div class="transaction-amount negative">-$5.47</div>
+                        <div class="transaction-edit">
+                            <button class="edit-btn">
+                                <span>✏️</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="transaction-item">
+                        <div class="transaction-icon gas">
+                            <span>⛽</span>
+                        </div>
+                        <div class="transaction-details">
+                            <div class="transaction-name">Shell Gas Station</div>
+                            <div class="transaction-date">Dec 14, 2024</div>
+                            <div class="transaction-category">gas</div>
+                        </div>
+                        <div class="transaction-amount negative">-$45.20</div>
+                        <div class="transaction-edit">
+                            <button class="edit-btn">
+                                <span>✏️</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="transaction-item">
+                        <div class="transaction-icon income">
+                            <span>💵</span>
+                        </div>
+                        <div class="transaction-details">
+                            <div class="transaction-name">Salary Deposit</div>
+                            <div class="transaction-date">Dec 13, 2024</div>
+                            <div class="transaction-category">income</div>
+                        </div>
+                        <div class="transaction-amount positive">+$3,200.00</div>
+                        <div class="transaction-edit">
+                            <button class="edit-btn">
+                                <span>✏️</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="transaction-item">
+                        <div class="transaction-icon shop">
+                            <span>🛍️</span>
+                        </div>
+                        <div class="transaction-details">
+                            <div class="transaction-name">Amazon Purchase</div>
+                            <div class="transaction-date">Dec 12, 2024</div>
+                            <div class="transaction-category">shop</div>
+                        </div>
+                        <div class="transaction-amount negative">-$67.89</div>
+                        <div class="transaction-edit">
+                            <button class="edit-btn">
+                                <span>✏️</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="month-divider">
+                        <h3>November 2024</h3>
+                    </div>
+
+                    <div class="transaction-item">
+                        <div class="transaction-icon food">
+                            <span>🍴</span>
+                        </div>
+                        <div class="transaction-details">
+                            <div class="transaction-name">Pizza Palace</div>
+                            <div class="transaction-date">Nov 28, 2024</div>
+                            <div class="transaction-category">food</div>
+                        </div>
+                        <div class="transaction-amount negative">-$23.50</div>
+                        <div class="transaction-edit">
+                            <button class="edit-btn">
+                                <span>✏️</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="transaction-item">
+                        <div class="transaction-icon gas">
+                            <span>⛽</span>
+                        </div>
+                        <div class="transaction-details">
+                            <div class="transaction-name">Exxon Mobile</div>
+                            <div class="transaction-date">Nov 25, 2024</div>
+                            <div class="transaction-category">gas</div>
+                        </div>
+                        <div class="transaction-amount negative">-$38.75</div>
+                        <div class="transaction-edit">
+                            <button class="edit-btn">
+                                <span>✏️</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="transaction-item">
+                        <div class="transaction-icon shop">
+                            <span>🛍️</span>
+                        </div>
+                        <div class="transaction-details">
+                            <div class="transaction-name">Target Store</div>
+                            <div class="transaction-date">Nov 22, 2024</div>
+                            <div class="transaction-category">shop</div>
+                        </div>
+                        <div class="transaction-amount negative">-$127.30</div>
+                        <div class="transaction-edit">
+                            <button class="edit-btn">
+                                <span>✏️</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="transaction-item">
+                        <div class="transaction-icon entertainment">
+                            <span>🎬</span>
+                        </div>
+                        <div class="transaction-details">
+                            <div class="transaction-name">Netflix Subscription</div>
+                            <div class="transaction-date">Nov 15, 2024</div>
+                            <div class="transaction-category">entertainment</div>
+                        </div>
+                        <div class="transaction-amount negative">-$15.99</div>
+                        <div class="transaction-edit">
+                            <button class="edit-btn">
+                                <span>✏️</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,396 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* App Container */
+.app-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar Navigation */
+.sidebar {
+    width: 250px;
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px 0;
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 0 20px;
+}
+
+.logo h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #3498db;
+}
+
+.nav-menu {
+    list-style: none;
+}
+
+.nav-item {
+    margin-bottom: 10px;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    color: #bdc3c7;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    /* Desktop: Make navigation items 50% taller */
+    min-height: 60px;
+}
+
+.nav-link:hover,
+.nav-item.active .nav-link {
+    background-color: #34495e;
+    color: white;
+}
+
+.nav-link .nav-icon {
+    margin-right: 12px;
+    width: 20px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.nav-link span:last-child {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    margin-left: 250px;
+    padding: 20px;
+    max-width: calc(100% - 250px);
+}
+
+/* Header with Account Balance */
+.header {
+    background-color: white;
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.account-balance {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.balance-amount {
+    font-size: 48px;
+    font-weight: bold;
+    color: #000000; /* Always black text, even if negative */
+}
+
+/* Transactions Section */
+.transactions-section {
+    background-color: white;
+    border-radius: 12px;
+    padding: 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.transactions-container {
+    padding: 20px;
+}
+
+/* Month Dividers */
+.month-divider {
+    margin: 30px 0 20px 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.month-divider:first-child {
+    margin-top: 0;
+}
+
+.month-divider h3 {
+    color: #2c3e50;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* Transaction Items */
+.transaction-item {
+    display: flex;
+    align-items: center;
+    padding: 16px 0;
+    border-bottom: 1px solid #f0f0f0;
+    transition: background-color 0.2s ease;
+}
+
+.transaction-item:hover {
+    background-color: #f8f9fa;
+}
+
+.transaction-item:last-child {
+    border-bottom: none;
+}
+
+/* Transaction Icon */
+.transaction-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 16px;
+    flex-shrink: 0;
+}
+
+.transaction-icon span {
+    font-size: 18px;
+}
+
+/* Category Colors */
+.transaction-icon.food {
+    background-color: #e74c3c;
+}
+
+.transaction-icon.gas {
+    background-color: #f39c12;
+}
+
+.transaction-icon.shop {
+    background-color: #9b59b6;
+}
+
+.transaction-icon.income {
+    background-color: #27ae60;
+}
+
+.transaction-icon.entertainment {
+    background-color: #3498db;
+}
+
+/* Transaction Details */
+.transaction-details {
+    flex: 1;
+    min-width: 0;
+}
+
+.transaction-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 4px;
+}
+
+.transaction-date {
+    font-size: 14px;
+    color: #7f8c8d;
+    margin-bottom: 8px;
+}
+
+.transaction-category {
+    display: inline-block;
+    padding: 4px 8px;
+    background-color: #ecf0f1;
+    color: #2c3e50;
+    font-size: 12px;
+    border-radius: 12px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+/* Transaction Amount */
+.transaction-amount {
+    font-size: 16px;
+    font-weight: 600;
+    margin-right: 16px;
+    min-width: 80px;
+    text-align: right;
+    flex-shrink: 0;
+}
+
+.transaction-amount.positive {
+    color: #27ae60;
+}
+
+.transaction-amount.negative {
+    color: #e74c3c;
+}
+
+/* Edit Button */
+.transaction-edit {
+    flex-shrink: 0;
+}
+
+.edit-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 6px;
+    color: #7f8c8d;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.edit-btn:hover {
+    background-color: #ecf0f1;
+    color: #2c3e50;
+}
+
+.edit-btn span {
+    font-size: 14px;
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 15px 0;
+    }
+
+    .main-content {
+        margin-left: 0;
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .nav-menu {
+        display: flex;
+        justify-content: space-around;
+        padding: 0 20px;
+    }
+
+    .nav-item {
+        margin-bottom: 0;
+        flex: 1;
+    }
+
+    .nav-link {
+        flex-direction: column;
+        text-align: center;
+        padding: 12px 8px;
+        min-height: auto; /* Reset desktop height for mobile */
+    }
+
+    .nav-link .nav-icon {
+        margin-right: 0;
+        margin-bottom: 4px;
+        font-size: 18px;
+    }
+
+    .nav-link span:last-child {
+        font-size: 12px;
+    }
+
+    .header {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .balance-amount {
+        font-size: 36px;
+    }
+
+    .transactions-container {
+        padding: 15px;
+    }
+
+    .transaction-item {
+        padding: 12px 0;
+    }
+
+    .transaction-icon {
+        width: 40px;
+        height: 40px;
+        margin-right: 12px;
+    }
+
+    .transaction-icon span {
+        font-size: 16px;
+    }
+
+    .transaction-name {
+        font-size: 15px;
+    }
+
+    .transaction-amount {
+        font-size: 14px;
+        min-width: 70px;
+        margin-right: 12px;
+    }
+
+    .edit-btn {
+        padding: 6px;
+    }
+}
+
+@media (max-width: 480px) {
+    .app-container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        order: 2;
+        position: static;
+        height: auto;
+    }
+
+    .main-content {
+        order: 1;
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .header {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+    .balance-amount {
+        font-size: 28px;
+    }
+
+    .transactions-container {
+        padding: 10px;
+    }
+
+    .transaction-item {
+        padding: 10px 0;
+    }
+
+    .transaction-details {
+        margin-right: 8px;
+    }
+
+    .transaction-amount {
+        margin-right: 8px;
+    }
+}
