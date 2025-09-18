@@ -80,7 +80,7 @@ body {
 }
 
 .nav-item {
-    padding: 1rem 2rem;
+    padding: 1.5rem 2rem;
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -127,6 +127,13 @@ body {
     font-size: 1.1rem;
 }
 
+.account-balance {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #000 !important;
+    margin-top: 0.5rem;
+}
+
 /* Transactions Container */
 .transactions-container {
     background: white;
@@ -137,6 +144,21 @@ body {
 
 .transaction-list {
     padding: 0;
+}
+
+/* Month Divider */
+.month-divider {
+    background: #f8f9fa;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #e1e5e9;
+    border-top: 1px solid #e1e5e9;
+}
+
+.month-divider h3 {
+    color: #495057;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0;
 }
 
 /* Transaction Item */
@@ -192,6 +214,18 @@ body {
 .transaction-date {
     color: #6c757d;
     font-size: 0.9rem;
+}
+
+.transaction-category {
+    color: #667eea;
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-top: 0.25rem;
+    text-transform: capitalize;
+    background: rgba(102, 126, 234, 0.1);
+    padding: 0.2rem 0.5rem;
+    border-radius: 12px;
+    display: inline-block;
 }
 
 .transaction-amount {
@@ -321,10 +355,16 @@ body {
     
     .transaction-item {
         padding: 1rem;
-        flex-wrap: wrap;
+        align-items: flex-start;
     }
     
     .transaction-details {
         min-width: 200px;
+        flex: 1;
+    }
+    
+    .transaction-actions {
+        align-self: flex-start;
+        margin-top: 0.25rem;
     }
 }
