@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myBank - Transaction Manager</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-university"></i>
+                    <span>myBank</span>
+                </div>
+                <div class="user-info">
+                    <span>Welcome, John Doe</span>
+                    <i class="fas fa-user-circle"></i>
+                </div>
+            </div>
+        </header>
+
+        <div class="main-layout">
+            <!-- Left Sidebar -->
+            <aside class="sidebar">
+                <nav class="sidebar-nav">
+                    <ul>
+                        <li class="nav-item active">
+                            <i class="fas fa-dollar-sign"></i>
+                            <span>Money</span>
+                        </li>
+                        <li class="nav-item">
+                            <i class="fas fa-chart-pie"></i>
+                            <span>Budget</span>
+                        </li>
+                        <li class="nav-item">
+                            <i class="fas fa-credit-card"></i>
+                            <span>Cards</span>
+                        </li>
+                        <li class="nav-item">
+                            <i class="fas fa-cog"></i>
+                            <span>Settings</span>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="main-content">
+                <div class="content-header">
+                    <h1>Recent Transactions</h1>
+                    <div class="account-balance" id="accountBalance">$1,926.18</div>
+                </div>
+
+                <div class="transactions-container">
+                    <div class="transaction-list" id="transactionList">
+                        <!-- Transactions will be populated by JavaScript -->
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
